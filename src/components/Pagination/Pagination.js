@@ -20,6 +20,10 @@ const Pagination = ({ setPageNumber , pageNumber}) => {
     // let previus = () => {
     //     setPageNumber((x) => x > 1 ? x - 1 : x);
     // }
+
+    // The solution in the video is:
+    // if(pageNumber === 1 )return;
+
 }
 
 export default Pagination
