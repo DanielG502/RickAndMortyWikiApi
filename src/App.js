@@ -9,31 +9,24 @@ import Search from "./components/Search/Search";
 
 function App() {
   let [pageNumber, setPageNumber] = useState(1);
-    //Search Bar
-  let [search, setSearch] = useState("")
+  let [search, setSearch] = useState("");    //Search Bar
   let [fetchedData, updateFetchedData] = useState([]);
   let { info , results } = fetchedData;
-
-
-  console.log(pageNumber);
   let api = `https://rickandmortyapi.com/api/character/?page=${pageNumber}&name=${search}`;
-
+  
   useEffect(() => {
     (async function () {
       let data = await fetch(api).then((res) => res.json());
       updateFetchedData(data)
     })();
-  }, [api])
-
+}, [api])
 
   return (
     <div className="App">
     <h1 className="text-center ubuntu my-4">
       Rick & Morty <span className="text-primary" >Wiki</span> 
       </h1>
-
-      <Search setPageNumber={setPageNumber} setSearch={setSearch}/>
-
+      <Search setPageNumber={setPageNumber} setSearch={setSearch} />
       <div className="container">
         <div className="row">
           <div className="col-3">
@@ -46,7 +39,9 @@ function App() {
             </div>
           </div>
         </div>
-        <Pagination pageNumber={pageNumber} setPageNumber={setPageNumber} />
+        <Pagination info={info} 
+        pageNumber={pageNumber} 
+        setPageNumber={setPageNumber} />
       </div>
   );
 }

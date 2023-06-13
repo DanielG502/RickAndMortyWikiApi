@@ -5,7 +5,7 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: silver !important;
+  /* background-color: silver !important; */
 }
 
 .ubuntu{
@@ -16,3 +16,4 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+

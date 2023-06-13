@@ -9,7 +9,10 @@ const Search = ({setSearch , setPageNumber}) => {
             setSearch(e.target.value);
         }}
         placeholder="Search for Characters" type="text" className={styles.input} />
-        <button onclick={e=>{e.preventDefault();}} className={`${styles.btn} btn btn-primary fs-5`}>Search</button>
+        <button onClick ={(e) => {
+            e.preventDefault();
+        }}
+        className={`${styles.btn} btn btn-primary fs-5`}>Search</button>
     </form>
     );
 };

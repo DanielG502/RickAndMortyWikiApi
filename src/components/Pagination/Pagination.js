@@ -1,29 +1,35 @@
 import React from 'react'
+import ReactPaginate from 'react-paginate';
+import styles from './Pagination.module.scss';
 
-
-const Pagination = ({ setPageNumber , pageNumber}) => {
-    let next = () => {
-        setPageNumber((x) =>  x + 1);
-    };
-    let previus = () => {
-        if(pageNumber === 1 )return;
-        setPageNumber((x) =>  x - 1);
-    }
+const Pagination = ({ info, pageNumber, setPageNumber }) => {
     return (
-        <div className="container d-flex justify-content-center gap-5 my-5">
-            <button onClick={previus} className="btn btn-primary">Previus</button>
-            <button onClick={next} className="btn btn-primary">Next</button>
-        </div>
-    )
+    <ReactPaginate
+    className= "justify-content-center pagination gap-4 my-4"
+    forcePage={pageNumber===1? 0 : pageNumber -1}
+    nextLabel = "Next"
+    previousLabel = "Previous"
+    nextClassName={`${styles.btnnext} btn btn-outline-primary`}
+    previousClassName={`${styles.btnnext} btn btn-outline-primary`}
+    pageClassName='page-item'
+    pageLinkClassName='page-link'
+    activeClassName='active'
+    onPageChange={(data) => {
+        setPageNumber(data.selected +1)
+    }}
+    pageCount={info?.pages}
+    />
+    );
+};
+export default Pagination;
 
-    // my solution 
-    // let previus = () => {
-    //     setPageNumber((x) => x > 1 ? x - 1 : x);
-    // }
 
-    // The solution in the video is:
-    // if(pageNumber === 1 )return;
 
-}
-
-export default Pagination
+// className="pagination justify-content-center my-4 gap-4"
+//     nextLabel = "Next"
+//     previousLabel="Prev"
+//     previousClassName="btn btn-primary fs-5 prev"
+//     nextClassName="btn btn-primary fs-5 next"
+//     pageClassName="page-item"
+//     pageLinkClassName="page-link"
+//     pageCount={info?.pages} 
