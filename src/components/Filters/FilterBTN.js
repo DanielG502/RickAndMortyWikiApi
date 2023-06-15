@@ -4,7 +4,7 @@ const FilterBTN = ({ name, index, items, task, setPageNumber }) => {
     return (
         <div>
             {/* Eliminamos el elemento que seleccionaba el boton */}
-            <style jsx>
+            <style jsx='true'>
                 {`
                     .x: checked + label {
                         backgraound-color: #0b5ed07;
@@ -14,20 +14,20 @@ const FilterBTN = ({ name, index, items, task, setPageNumber }) => {
                     }
                 `}
             </style>
-            <div class='form-check'>
+            <div className='form-check'>
                 <input
                     onClick={() => {
                         setPageNumber(1);
                         task(items);
                     }}
-                    class='form-check-input x'
+                    className='form-check-input x'
                     type='radio'
                     name={name}
                     id={`${name}-${index}`}
                 />
                 <label
-                    class='btn btn-outline-primary'
-                    for={`${name}-${index}`}>
+                    className='btn btn-outline-primary'
+                    htmlFor={`${name}-${index}`}>
                     {items}
                 </label>
             </div>
