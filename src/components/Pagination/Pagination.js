@@ -13,7 +13,7 @@ const Pagination = ({ info, pageNumber, setPageNumber }) => {
             previousClassName={`${styles.btnnext} btn btn-outline-primary fw-bold`}
             pageClassName='page-item'
             pageLinkClassName='page-link'
-            activeClassName='active'
+            isactive='active'
             onPageChange={(data) => {
                 setPageNumber(data.selected + 1);
             }}

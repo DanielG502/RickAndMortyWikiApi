@@ -36,7 +36,7 @@ const NavBar = () => {
                     id='navbarNavAltMarkup'>
                     <div className='navbar-nav fs-5'>
                         <NavLink
-                            activecClassName='active'
+                            isactive='active'
                             to='/'
                             className='nav-link'>
                             Characters
@@ -57,5 +57,5 @@ const NavBar = () => {
         </nav>
     );
 };
-
+console.log('Revisar NavBar active');
 export default NavBar;
