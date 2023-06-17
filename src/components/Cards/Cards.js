@@ -1,16 +1,19 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styles from './Cards.module.scss';
 
-const Cards = ({ results }) => {
+const Cards = ({ results, page }) => {
     let display;
     // console.log(results);
     if (results) {
         display = results.map((x) => {
             let { id, name, image, location, status } = x;
             return (
-                <div
+                <Link
+                    style={{ textDecoration: 'none' }}
+                    to={`${page}${id}`}
                     key={id}
-                    className='col-4 mb-4 position-relative'>
+                    className='col-4 mb-4 position-relative text-dark'>
                     <div className={styles.cards}>
                         <img
                             src={image}
@@ -51,7 +54,7 @@ const Cards = ({ results }) => {
                             );
                         }
                     })()}
-                </div>
+                </Link>
             );
         });
     } else {
