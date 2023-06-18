@@ -8,8 +8,8 @@ import Search from './components/Search/Search';
 import NavBar from './components/NavBar/NavBar';
 import Footer from './components/Footer/footer';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Episodes from './pages/Episodes';
-import Location from './pages/Location';
+import Episodes from './Pages/Episodes';
+import Location from './Pages/Location';
 import CardsDetails from './components/Cards/CardsDetails';
 
 function App() {
