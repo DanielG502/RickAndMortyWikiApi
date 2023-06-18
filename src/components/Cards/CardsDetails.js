@@ -7,7 +7,7 @@ const CardsDetails = () => {
     let { name, image, location, origin, gender, species, status, type } =
         fetchedData;
 
-    console.log(fetchedData);
+    // console.log(fetchedData);
     let api = `https://rickandmortyapi.com/api/character/${id}`;
     useEffect(() => {
         (async function () {
@@ -22,7 +22,9 @@ const CardsDetails = () => {
                 <h1 className='text-center'>{name}</h1>
                 <img
                     src={image}
-                    className='img-fluid'></img>
+                    alt=''
+                    className='img-fluid'
+                />
 
                 {(() => {
                     if (status === 'Dead') {

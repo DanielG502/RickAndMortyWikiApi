@@ -6,10 +6,11 @@ import Filters from './components/Filters/Filters';
 import Pagination from './components/Pagination/Pagination';
 import Search from './components/Search/Search';
 import NavBar from './components/NavBar/NavBar';
+import Footer from './components/Footer/Footer';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Episodes from './Pages/Episodes';
-import Location from './Pages/Location';
+import Episodes from './pages/Episodes';
+import Location from './pages/Location';
 import CardsDetails from './components/Cards/CardsDetails';
 
 function App() {
@@ -82,7 +83,7 @@ const Home = () => {
                         setStatus={setStatus}
                         setPageNumber={setPageNumber}
                     />
-                    <div className='col-8'>
+                    <div className='col-lg-8 col-12'>
                         <div className='row'>
                             <Cards
                                 page='/'
@@ -97,6 +98,9 @@ const Home = () => {
                 pageNumber={pageNumber}
                 setPageNumber={setPageNumber}
             />
+            <div>
+                <Footer />
+            </div>
         </div>
     );
 };

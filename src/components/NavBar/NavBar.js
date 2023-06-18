@@ -6,9 +6,9 @@ const NavBar = () => {
     return (
         <nav className='navbar navbar-expand-lg navbar-light bg-light mb-4'>
             <div className='container'>
-                <h1 className='fs-3 ubuntu navbar-brand'>
+                <Link className='fs-3 ubuntu navbar-brand'>
                     Rick & Morty <span className='text-primary'>Wiki</span>
-                </h1>
+                </Link>
                 <button
                     className='navbar-toggler'
                     type='button'
@@ -57,5 +57,4 @@ const NavBar = () => {
         </nav>
     );
 };
-console.log('Revisar NavBar active');
 export default NavBar;
