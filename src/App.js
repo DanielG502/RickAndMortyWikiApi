@@ -6,7 +6,7 @@ import Filters from './components/Filters/Filters';
 import Pagination from './components/Pagination/Pagination';
 import Search from './components/Search/Search';
 import NavBar from './components/NavBar/NavBar';
-import Footer from './components/Footer/footer';
+import Footer from './components/Footer/Footers';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Episodes from './Pages/Episodes';
 import Location from './Pages/Location';
