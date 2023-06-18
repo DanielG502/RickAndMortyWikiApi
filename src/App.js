@@ -103,4 +103,6 @@ const Home = () => {
         </div>
     );
 };
+console.log('No es mucho pero es Trabajo Honesto :D');
+console.log('By DanielG502 :D');
 export default App;
